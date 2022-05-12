@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Tech</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+        </style>
+</head>
+<body>
+    <h1>Device Details</h1>
+    <div>
+        <table>
+            <tr>
+                <th>Sr.No</th>
+                <th>Hit Time</th>
+                <th>Device ID</th>
+                <th>Time</th>
+                <th>Card ID</th>
+            </tr>
+        <% for (let i = 0; i < data.length; i++) {  %>
+            <tr>
+                <td><%= i+1  %></td>
+                <td><%= data[i].htime  %></td>
+                <td><%= data[i].deviceId  %></td>
+                <td><%= data[i].time  %></td>
+                <td><%= data[i].cid  %></td>
+            </tr>
+        <% }  %>
+        </table>
+    </div>
+    <script>
+        window.setInterval('refresh()', 3000);
+        function refresh() {
+            window .location.reload();
+        }
+    </script>
+</body>
+</html>
