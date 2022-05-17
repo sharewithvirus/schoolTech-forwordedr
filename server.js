@@ -22,7 +22,7 @@ const moment = require("moment");
 // -------------Import Models ----------------------
 
 const RawAttendance = require("./models/rawAttendanceModel");
-const dbUrl=`${process.env.DB_URL_L}` //For Local Data Base.
+const dbUrl=`${process.env.DB_URL}` //For Local Data Base.
 // const dbUrl = process.env.DB-URL;
 // const dbUrl="mongodb+srv://appAccess:rJ7CHqX7TslmJKCW@attendance-forworder.sarpw.mongodb.net/schoolTech-Master"
 // const telegramToken = `${process.env.BOTTOKEN}`;
